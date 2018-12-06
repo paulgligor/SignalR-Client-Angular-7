@@ -1,0 +1,19 @@
+
+  <div>
+    <h2>Messages</h2>
+    <p *ngFor="let message of messages">
+      {{message.name}} | "{{message.text}}"
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <input type="text" [(ngModel)]="message.name" />
+    </div>
+    <div class="col-md-4">
+        <input type="text" [(ngModel)]="message.text" />
+    </div>
+    <div class="col-md-4">
+        <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>

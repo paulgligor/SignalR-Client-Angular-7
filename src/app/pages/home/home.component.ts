@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { HubConnection, HubConnectionBuilder } from '@aspnet/signalr';
-import { Message } from './models/message.model';
+import { HubConnection } from '@aspnet/signalr';
 import * as signalR from '@aspnet/signalr';
+import { Message } from 'src/app/core/models/message.model';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class AppComponent implements OnInit {
+export class HomeComponent implements OnInit {
   public messages: Message[] = [];
   public message: Message = new Message();
   private connection: HubConnection;
@@ -39,4 +39,5 @@ export class AppComponent implements OnInit {
     this.connection.invoke('BroadcastMessage', this.message);
     this.message = new Message();
   }
+
 }
