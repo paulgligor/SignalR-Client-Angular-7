@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HubConnection } from '@aspnet/signalr';
 import * as signalR from '@aspnet/signalr';
 import { Message } from 'src/app/core/models/message.model';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     const builder = new signalR.HubConnectionBuilder();
     this.connection = builder
-      .withUrl('http://localhost:52525/hubs/messaging')
+      .withUrl(environment.messagingHubLink)
       .build();
 
     this.connection.start()

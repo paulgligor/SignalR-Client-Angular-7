@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  messagingHubLink: 'https://example-project-signalr-client.azurewebsites.net/hubs/messaging'
 };
