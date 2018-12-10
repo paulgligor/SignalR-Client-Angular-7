@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   messagingHubLink: 'http://localhost:52525/hubs/messaging'
-  // messagingHubLink: 'https://example-project-signalr-hub2.azurewebsites.net/hubs/messaging'
+  // messagingHubLink: 'https://example-project-signalr-hub.azurewebsites.net/hubs/messaging'
 };
 
 /*
